@@ -1,26 +1,26 @@
 -- Test data generator for 50,000 orders with average 3 items each
 
--- Cleanup existing data in correct order (respecting foreign keys)
-DELETE FROM WorkItem;
-DELETE FROM Works; 
-DELETE FROM Organization;
-DELETE FROM PrintTemplate;
-DELETE FROM TemplateType;
-DELETE FROM Employee;
-DELETE FROM Analiz;
-DELETE FROM WorkStatus;
-DELETE FROM SelectType;
+-- -- Cleanup existing data in correct order (respecting foreign keys)
+-- DELETE FROM WorkItem;
+-- DELETE FROM Works; 
+-- DELETE FROM Organization;
+-- DELETE FROM PrintTemplate;
+-- DELETE FROM TemplateType;
+-- DELETE FROM Employee;
+-- DELETE FROM Analiz;
+-- DELETE FROM WorkStatus;
+-- DELETE FROM SelectType;
 
--- Reset identity seeds
-DBCC CHECKIDENT ('WorkItem', RESEED, 0);
-DBCC CHECKIDENT ('Works', RESEED, 0);
-DBCC CHECKIDENT ('Organization', RESEED, 0);
-DBCC CHECKIDENT ('PrintTemplate', RESEED, 0);
-DBCC CHECKIDENT ('TemplateType', RESEED, 0);
-DBCC CHECKIDENT ('Employee', RESEED, 0);
-DBCC CHECKIDENT ('Analiz', RESEED, 0);
-DBCC CHECKIDENT ('WorkStatus', RESEED, 0);
-DBCC CHECKIDENT ('SelectType', RESEED, 0);
+-- -- Reset identity seeds
+-- DBCC CHECKIDENT ('WorkItem', RESEED, 0);
+-- DBCC CHECKIDENT ('Works', RESEED, 0);
+-- DBCC CHECKIDENT ('Organization', RESEED, 0);
+-- DBCC CHECKIDENT ('PrintTemplate', RESEED, 0);
+-- DBCC CHECKIDENT ('TemplateType', RESEED, 0);
+-- DBCC CHECKIDENT ('Employee', RESEED, 0);
+-- DBCC CHECKIDENT ('Analiz', RESEED, 0);
+-- DBCC CHECKIDENT ('WorkStatus', RESEED, 0);
+-- DBCC CHECKIDENT ('SelectType', RESEED, 0);
 
 -- Generate WorkStatus (5 records)
 INSERT INTO WorkStatus (StatusName) VALUES 

@@ -5,7 +5,7 @@ RETURNS TABLE
 AS
 RETURN
 (
-    SELECT TOP 100 PERCENT
+    SELECT
         w.Id_Work,
         w.CREATE_Date,
         w.MaterialNumber,
@@ -48,6 +48,5 @@ RETURN
     LEFT JOIN dbo.Employee AS emp
       ON emp.Id_Employee = w.Id_Employee
     WHERE w.Is_Del <> 1
-    ORDER BY w.Id_Work DESC
 );
 GO
